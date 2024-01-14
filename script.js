@@ -16,7 +16,14 @@ valueDisplays.forEach((valueDisplays) =>{
 
     },duration)
 })
+window.addEventListener('scroll', function() {
+  const navbarMenu = document.getElementById('navbarMenu');
 
+  // Tutup daftar jika sedang terbuka
+  if (navbarMenu.classList.contains('active')) {
+    navbarMenu.classList.remove('active');
+  }
+});
 document.addEventListener("DOMContentLoaded",function(){
   let nav = document.getElementById("navbar")
   let navtgl = document.getElementById("navbar-toggle")
@@ -24,7 +31,6 @@ document.addEventListener("DOMContentLoaded",function(){
   window.addEventListener("scroll", function(){
     let scrollPosition  = this.window.scrollY;
     if (scrollPosition >= footer - 800){
-      console.log("hello")
       nav.classList.add("bg-dark")
       navtgl.classList.add("bg-dark")
     }
