@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 #navbar {
@@ -178,14 +179,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 110vh;
+  height: auto;
+  padding:20px 0 20px 0;
 }
 
 .shortDescription .message {
-  width: 80%;
+  width: 90%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   height: 95%;
   position: relative;
 }
@@ -200,9 +202,6 @@
   width: 50%;
   height: 100%;
   color: #323232;
-  padding-right: 100px;
-  display: flex;
-  flex-direction: column;
 }
 .shortDescription .message .description > h5{
   width: 100px;
@@ -221,12 +220,13 @@
 }
 .shortDescription .message .description > img{
   display: none;
+  margin-left: 10px;
 }
 .shortDescription .message .description > p{
-  text-align: justify;
   font-size: 19px;
   line-height: 27px;
   color: #414141;
+  text-align: justify;
   font-family: "Poppins", sans-serif;
   margin: 10px 20px 0 0 ;
 }
@@ -414,6 +414,7 @@
   position: absolute;
   bottom: 0;
 }
+
 .highlight{
   font-size: 48px;
   text-align: center;
@@ -444,12 +445,13 @@ footer{
   justify-content: center;
   align-items: center;
   padding: 0;
+  
   flex-direction: column;
 }
 footer i {
   color: white;
   margin: 20px;
-  font-size: 40px;
+  font-size: 40px; 
   
 }
 footer .location{
@@ -474,8 +476,11 @@ footer .location{
     transform: translatex(400px);
     transition: transform 0.3s ease-in-out;
     height: 280px;
-    background-color: rgba(0, 0, 0, 0.3)  ;
+    background-color: white  ;
     box-shadow: -5px 1px 4px rgb(146 161 176 / 15%);
+  }
+  #navbar.bg-dark ul{
+    background-color: rgba(0, 0, 0, 0.3)
   }
   #navbar ul li a::after{
     display: none;
@@ -514,22 +519,37 @@ footer .location{
     width: 70%;
     left: 50px;
   }
-  .shortDescription{
-    height: 185vh;
-  }
   .shortDescription .message > img{
     display: none;
   }
   .shortDescription .message .description{
-    padding: 0;
+    
     width: 100%;
   }
   .shortDescription .message .description >h5{
     width: 50px;
     font-size: 16px;
   }
+  .shortDescription .message .description >h2{
+
+    font-size: 32px;
+    text-align: center;
+  }
   .shortDescription .message .description > img{
     display: block;
+    width: 80%;
+    position: relative;
+    margin-left: 25px;
+    background-color: white;
+    padding: 10px 10px 10px 10px ;
+    box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.3);
+  }.shortDescription .message .description > p{
+    font-size: 19px;
+    line-height: 27px;
+    color: #414141;
+    text-align: justify;
+    font-family: "Poppins", sans-serif;
+    margin: 10px 0 0 0 ;
   }
   .left >.card:nth-child(2) > .ket > .value,p{
     font-size: 28px;
@@ -565,5 +585,20 @@ footer .location{
   .foodstyle p{
     font-size: 96px;
     line-height: 100px;
+  }
+  .outhentic{
+    height: 50vh;
+    margin-top: 100px;
+  }
+  .dark-to-light-toptobottom{
+    height: 75%;
+  }
+  .outhentic img{
+    scale: 1;
+    width: 130%;
+
+  }
+  .highlight{
+    font-size: 28px;
   }
 }
