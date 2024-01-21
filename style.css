@@ -472,6 +472,7 @@ footer .location{
     position: absolute;
     top: 75px;
     right: 0;
+    transform: translateX(400px);
     width: 100px;
     transition: transform 0.3s ease-in-out;
     height: 280px;
